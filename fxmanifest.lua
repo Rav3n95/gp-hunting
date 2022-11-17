@@ -18,5 +18,6 @@ client_script 'client.lua'
 server_script 'server.lua'
 
 dependency 'qb-core'
+dependency 'ox_lib'
 dependency 'ox_inventory'
 dependency 'ox_target'

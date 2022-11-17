@@ -14,10 +14,10 @@ local currentWeapon = nil
 
     local function GetMeatType(prey)
         if not prey then return 'wild' end
-        DeleteEntity(prey)
 
         local preyMeat
         local preyModel = GetEntityModel(prey)
+        DeleteEntity(prey)
         
         if preyModel == `a_c_deer` then
             preyMeat = 'deer'
@@ -113,7 +113,3 @@ local currentWeapon = nil
     RegisterNetEvent('QBCore:Player:SetPlayerData', function(val)
         PlayerData = val
     end)
-
-RegisterCommand('tool', function(source)
-
-end, false)
