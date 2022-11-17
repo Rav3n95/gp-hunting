@@ -1,0 +1,8 @@
+{
+    "Lua.diagnostics.globals": [
+        "cache",
+        "cache",
+        "lib",
+        "lib"
+    ]
+}
