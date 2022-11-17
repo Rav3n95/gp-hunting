@@ -44,8 +44,6 @@ local currentWeapon = nil
             Wait(10)
         end
 
-        
-
         if lib.progressCircle({
             duration = Config.processTime * 1000,
             position = 'bottom',
@@ -57,10 +55,9 @@ local currentWeapon = nil
             anim = {
                 dict = 'amb@world_human_gardener_plant@male@base',
                 clip = 'base',
-                flag = '1'
+                flag = 1
             },
         }) then TriggerServerEvent('gp_hunting:server:Reward', GetMeatType(prey)) else print('Do stuff when cancelled') end
-        --DeleteEntity(prey)
     end
 
     local function EnableTarget()
