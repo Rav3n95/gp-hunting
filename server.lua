@@ -3,7 +3,7 @@ local ox_inventory = exports.ox_inventory
 local DropQ = {}
 
 local function CreateCustomDrop()
-    local src = tonumber(source)
+    local src = tonumber(source) or source
     local Pos = GetEntityCoords(GetPlayerPed(source))
     ox_inventory:CustomDrop('Reward', DropQ[src], Pos)
     DropQ[src] = {}
@@ -13,7 +13,6 @@ local function AddItem(item, quantity, metadata)
     local success, response = ox_inventory:AddItem(source, item, quantity)
 
     if not success then
-        --CreateCustomDrop(item, quantity)
         return print(response)
     end
 end

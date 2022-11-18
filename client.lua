@@ -60,6 +60,7 @@ local currentWeapon = nil
         }) then TriggerServerEvent('gp_hunting:server:Reward', GetMeatType(prey)) else print('Do stuff when cancelled') end
     end
 
+    -- #TODO: Target Icon
     local function EnableTarget()
         local targetOption = {
             {
